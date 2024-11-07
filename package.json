@@ -1,22 +1,41 @@
 {
-	"name": "sols-svelte-boilerplate",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
-		"svelte": "^5.0.0-next.1",
-		"svelte-check": "^4.0.0",
-		"typescript": "^5.0.0",
-		"vite": "^5.0.3"
-	},
-	"type": "module"
+  "name": "sols-sveltekit-boilerplate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "biome:format": "bunx biome format --write ./src/**/*",
+    "biome:lint": "bunx biome lint --write ./src/**/*",
+    "biome:check": "bunx biome check --write ./src/**/*"
+  },
+  "prisma": {
+    "seed": "bun run prisma/seed.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@oslojs/crypto": "^1.0.1",
+    "@oslojs/encoding": "^1.1.0",
+    "@sveltejs/adapter-auto": "^3.3.1",
+    "@sveltejs/kit": "^2.7.5",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/bun": "^1.1.13",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.14",
+    "postcss": "^8.4.47",
+    "prisma": "^5.22.0",
+    "svelte": "^5.1.9",
+    "svelte-check": "^4.0.5",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "vite": "^5.0.3"
+  },
+  "type": "module",
+  "dependencies": {
+    "@prisma/client": "5.22.0"
+  }
 }
